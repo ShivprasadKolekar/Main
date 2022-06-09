@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+  - deploy
+  
+  build-job:
+    stage: build
+    script:
+      - echo "compile the code"
+      - apt-get update -q -y-
+      - apt-get install y python-pip
+      - python -V
+      - pip install mkdocs
+      - mkdocs build --config-file mkdocs.yml
+      - echo "compiled the code"
+      
+      
+ WestraceIN:
+     stage: test
+     script:
+      - apt-get update -q -y-
+      - apt-get install y python-pip
+      - python -V
+      - pip install mkdocs
+      - mkdocs build --config-file mkdocs.yml
+      - echo "completed"
+     
+ Pages:
+ deploy-job:
+   stage: deploy
+   script:
+     - move user_manual/
+   artifacts:
+     paths:
+       - user_manual/
