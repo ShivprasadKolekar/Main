@@ -11,11 +11,13 @@ build-job:
   
   script:
        echo "build"
+       apt-get update -q -y
 
 deploy-job:
 
   stage: deploy
   
   script:
-     echo "Testing complete"         
+     echo "Testing complete"
+     move usermanual_site
 ---
