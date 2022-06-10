@@ -1,0 +1,31 @@
+---
+stages:
+  - build
+  - deploy
+
+build-job:
+
+  stage: build
+  
+  script:
+      - echo "build"
+      
+      - apt-get update -q -y
+      - apt-get install -y python-pip
+      - python -V
+      
+      - pip install mkdocs
+      - mkdocs build --config file mkdocs.yml
+      
+Pages:
+
+  stage: deploy
+  
+  script:
+    - move usermanual_site
+    
+  artifacts:
+    paths:
+      - usermanual_site/
+            
+---
