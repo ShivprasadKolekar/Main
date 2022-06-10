@@ -12,16 +12,12 @@ build-job:
       - echo "Testing"
 
       
-Pages:
+deploy-job:
 
   stage: deploy
   
   script:
-    - move usermanual_site
     - echo "Testing complete"
     
-  artifacts:
-    paths:
-      - usermanual_site/
             
 ---
