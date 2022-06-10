@@ -8,8 +8,7 @@ build-job:
   stage: build
   
   script:
-      - echo "build"
-      - echo "Testing"
+       echo "build"
 
       
 deploy-job:
@@ -17,7 +16,5 @@ deploy-job:
   stage: deploy
   
   script:
-    - echo "Testing complete"
-    
-            
+     echo "Testing complete"          
 ---
