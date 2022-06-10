@@ -1,4 +1,6 @@
 ---
+name: default
+on: push
 stages:
   - build
   - deploy
@@ -10,11 +12,10 @@ build-job:
   script:
        echo "build"
 
-      
 deploy-job:
 
   stage: deploy
   
   script:
-     echo "Testing complete"          
+     echo "Testing complete"         
 ---
