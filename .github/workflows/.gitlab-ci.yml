@@ -3,21 +3,12 @@ name: default
 on: push
 stages:
   - build
-  - deploy
 
 build-job:
 
   stage: build
   
   script:
-       echo "build"
-       apt-get update -q -y
-
-deploy-job:
-
-  stage: deploy
-  
-  script:
-     echo "Testing complete"
-     move usermanual_site
+       - echo "build"
+       - run: apt-get update -q -y
 ---
