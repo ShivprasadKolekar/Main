@@ -9,13 +9,8 @@ build-job:
   
   script:
       - echo "build"
-      
-      - apt-get update -q -y
-      - apt-get install -y python-pip
-      - python -V
-      
-      - pip install mkdocs
-      - mkdocs build --config file mkdocs.yml
+      - echo "Testing"
+
       
 Pages:
 
@@ -23,6 +18,7 @@ Pages:
   
   script:
     - move usermanual_site
+    - echo "Testing complete"
     
   artifacts:
     paths:
