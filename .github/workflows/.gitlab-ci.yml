@@ -1,6 +1,6 @@
 on: push
 jobs:
-my-job1:
+ my-job1:
   runs-on: windows-latest
   steps:
     - name: Install Dependencies
