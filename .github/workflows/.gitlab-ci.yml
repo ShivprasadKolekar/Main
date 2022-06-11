@@ -8,3 +8,4 @@ jobs:
              curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
              python get-pip.py
              pip install mkdocs
+             py -m mkdocs build --config-file mkdocs.yml
