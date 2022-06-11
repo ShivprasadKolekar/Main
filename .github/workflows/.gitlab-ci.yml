@@ -1,8 +1,8 @@
 on: push
 jobs:
- my-job1:
-   runs-on: windows-latest
-   steps:
-     - name: Install Dependencies
-       run: apt-get update -q -y
+my-job1:
+  runs-on: windows-latest
+  steps:
+    - name: Install Dependencies
+      run: apt-get update -q -y
 ---
