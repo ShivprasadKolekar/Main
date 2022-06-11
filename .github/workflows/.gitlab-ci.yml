@@ -1,5 +1,5 @@
 on: push
-jobs:
+job:
   my-job1:
     runs-on: windows-latest
     steps:
