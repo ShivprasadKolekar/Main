@@ -5,6 +5,5 @@ jobs:
  my-job1:
    steps:
      - name: Install Dependencies
-     - continue-on-error: true
        run: apt-get update -q -y
 ---
