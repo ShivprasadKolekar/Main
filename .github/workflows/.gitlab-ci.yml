@@ -4,4 +4,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Install Dependencies
-        run: winget upgrade --id Python.Python.3 --version 3.8.10150.0
+        run: python get-pip.py
