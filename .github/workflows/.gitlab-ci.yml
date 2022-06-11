@@ -2,11 +2,11 @@
 on: push
 
 jobs:
-my-job1:
+ my-job1:
    steps:
      - name: Install Dependencies
      - continue-on-error: true
-     - run:  |
-         apt-get update -q -y
-         apt-get install -y python-pip
+     - run:
+         - apt-get update -q -y
+         - apt-get install -y python-pip
 ---
