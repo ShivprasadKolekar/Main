@@ -1,17 +1,12 @@
 ---
-name: default
-on: 
-  push:
-   branches:
-    - main
-stages:
-  - build
+on: push
 
-build-job:
-
-  stage: build
-  
-  script:
-       - echo "build"
-       - run: apt-get update -q -y
+jobs:
+my-job1:
+   steps:
+     - name: Install Dependencies
+     - continue-on-error: true
+     - run:  |
+         apt-get update -q -y
+         apt-get install -y python-pip
 ---
