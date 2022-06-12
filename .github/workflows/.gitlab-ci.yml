@@ -3,10 +3,5 @@ jobs:
   job1:
     runs-on: windows-latest
     steps:
-      - name: Install
-        run: |
-          curl https://bootstrap.pypa.io/get-pip.py -0 get-pip.py
-          python get-pip.py
-          pip install mkdocs
-          poetry update
-          poetry install --no-root
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
