@@ -2,11 +2,9 @@ site_name: User Manual
 
 site_url: https:eample.com/test/
 
-site_dir: 'usermanual_site'
+site_dir: usermanual_site
 
 repo_url: https://github.com/ShivprasadKolekar/Main/
 
 nav:
   - Home: index.md
-  
- 
