@@ -2,8 +2,6 @@ on: push
 jobs:
   my-job1:
     runs-on: windows-latest
-    env:
-      working-directory: ./Main
     steps:
       - name: Install Dependencies
         working-directory: ./Main
