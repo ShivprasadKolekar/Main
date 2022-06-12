@@ -7,7 +7,7 @@ jobs:
         uses: snok/install-poetry@v1
       - name: Poetry run
         run: |
-          curl https://bootstrap.pypa.io/get-pip.py -oget-pip.py
-          python get-pip.py
-          pip install mkdocs
+          shell: bash
+          poetry install
+          poetry update
           poetry run mkdocs build --config-file mkdocs.yml
