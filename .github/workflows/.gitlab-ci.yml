@@ -5,5 +5,5 @@ jobs:
     steps:
       - name: Install Poetry
         run: |
-          snok/install-poetry@v1
+          poetry install
           poetry run mkdocs build --config-file mkdocs.yml
