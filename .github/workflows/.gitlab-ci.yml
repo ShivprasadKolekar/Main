@@ -5,6 +5,6 @@ jobs:
     steps:
       - name: Poetry run
         run: |
-          curl: -sSL https://install.python-poetry.org | python -
+          curl -sSL https://install.python-poetry.org | python -
           poetry update
         shell: bash
