@@ -5,7 +5,6 @@ jobs:
     steps:
       - name: Poetry run
         run: |
-          poetry install
+          curl: -sSL https://install.python-poetry.org | python -
           poetry update
-          poetry run mkdocs build --config-file mkdocs.yml
-        shell: python
+        shell: bash
