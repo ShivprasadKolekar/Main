@@ -6,7 +6,7 @@ jobs:
       - name: Create artifact files
         run: |
           mkdir -p dir1
-          echo {"site_name":"UserManual", "site_url":"https:eample.com/test/", "repo_url":"https://github.com/ShivprasadKolekar/Main/" , "site_dir":"usermanual_site"} > dir1/mkdocs.yml
+          echo "{"site_name":"UserManual", "site_url":"https:eample.com/test/", "repo_url":"https://github.com/ShivprasadKolekar/Main/" , "site_dir":"usermanual_site"}" > dir1/mkdocs.yml
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
