@@ -5,7 +5,7 @@ jobs:
     steps:
       - name: Poetry run
         run: |
-          $ poetry install
-          $ poetry update
-          $ poetry run mkdocs build --config-file mkdocs.yml
-        shell: bash
+          poetry install
+          poetry update
+          poetry run mkdocs build --config-file mkdocs.yml
+        shell: python
