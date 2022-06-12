@@ -7,16 +7,13 @@ jobs:
         run: |
           mkdir -p dir1
           echo "Hello" > dir1/mkd.yml
-      - name: Install
+      - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          name: homework
+          name: 'homework'
           path: dir1/mkd.yml
-  job2:
-    runs-on: windows-latest
-    steps:
       - name: Download
         uses: actions/download-artifact@v3
         with:
-          name: homework
-          path: /dir1
+          name: 'homework'
+          path: some/new/dir1
