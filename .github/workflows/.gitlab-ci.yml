@@ -4,7 +4,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Install Dependencies
-        working-directory: ./Main
+        working-directory: .\Main
         run: |
              curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
              python get-pip.py
