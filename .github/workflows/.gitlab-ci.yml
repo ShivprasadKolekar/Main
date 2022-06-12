@@ -3,8 +3,9 @@ jobs:
   job1:
     runs-on: windows-latest
     steps:
-      - name: Poetry run
+      - name: Pip mkdocs run
         run: |
-          curl -sSL https://install.python-poetry.org | python -
-          $poetry --version
-        shell: bash
+          curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+          python get-pip.py
+          pip install mkdocs
+          shell: bash
