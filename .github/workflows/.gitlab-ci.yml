@@ -3,11 +3,15 @@ jobs:
   job1:
     runs-on: windows-latest
     steps:
+      - name: Create artifact files
+        run: |
+          mkdir -p dir1
+          echo "Hello" > dir1/mkd.yml
       - name: Install
         uses: actions/upload-artifact@v3
         with:
           name: homework
-          path: 'main/mkdocs.yml'
+          path: dir1/mkd.yml
   job2:
     runs-on: windows-latest
     steps:
