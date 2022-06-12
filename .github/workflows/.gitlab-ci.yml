@@ -3,24 +3,10 @@ jobs:
   job1:
     runs-on: windows-latest
     steps:
-      - name: Create file
-        run: |
-          mkdir -p dir1
-          echo https://github.com/ShivprasadKolekar/Main/mkdocs.yml > dir1/mkdocs.yml
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: 'homework'
-          path: dir1/mkdocs.yml
-      - name: Download
-        uses: actions/download-artifact@v3
-        with:
-          name: 'homework'
-          path: some/new/dir1
       - name: Install
         run: |
           curl https://bootstrap.pypa.io/get-pip.py -0 get-pip.py
           python get-pip.py
           pip install mkdocs
-          cd dir1
-          mkdocs build
+          poetry update
+          poetry install --no-root
