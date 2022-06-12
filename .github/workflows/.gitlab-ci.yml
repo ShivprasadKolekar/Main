@@ -3,15 +3,11 @@ jobs:
   job1:
     runs-on: windows-latest
     steps:
-      - name: Create artifact files
-        run: |
-          mkdir -p dir1
-          echo "{"site_name":"User Manual", "site_url":"https:eample.com/test/", "repo_url":"https://github.com/ShivprasadKolekar/Main/" , "site_dir":"usermanual_site"}" > dir1/mkdocs.yml
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
           name: 'homework'
-          path: dir1/mkdocs.yml
+          path: https://github.com/ShivprasadKolekar/Main/blob/main/mkdocs.yml
       - name: Download
         uses: actions/download-artifact@v3
         with:
