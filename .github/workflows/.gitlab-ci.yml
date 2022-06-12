@@ -3,5 +3,5 @@ jobs:
   my-job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Dependencies
+      - name: Install
         run: apt update && apt install -y curl
