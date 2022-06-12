@@ -1,7 +1,17 @@
 on: push
 jobs:
-  my-job1:
-    runs-on: ubuntu-latest
+  job1:
+    runs-on: windows-latest
     steps:
       - name: Install
-        run: apt update && apt install -y curl
+        uses: actions/upload-artifact@v3
+        with:
+          name: homework
+          path: mkdocs.yml
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: Download
+        uses: actions/download-artifact@v3
+        with:
+          name: homework
