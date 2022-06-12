@@ -4,6 +4,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Install Poetry
-        run: |
-          poetry install
-          poetry run mkdocs build --config-file mkdocs.yml
+        uses: snok/install-poetry@v1
+      - name: Poetry run
+        run: poetry run mkdocs build --config-file mkdocs.yml
